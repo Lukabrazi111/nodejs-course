@@ -1,11 +1,8 @@
 [
   {
-    "title": "xdsa"
-  },
-  {
-    "title": "fxds"
-  },
-  {
-    "title": "fxds"
+    "title": "A Book",
+    "imageUrl": "https://t3.ftcdn.net/jpg/00/59/63/30/360_F_59633034_GHlAAALTnXLdBeLPpEQWjzZhsad3QtNX.jpg",
+    "description": "This is an awesome book!",
+    "price": "19"
   }
 ]
