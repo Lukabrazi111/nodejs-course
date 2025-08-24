@@ -14,31 +14,41 @@ const getProductsFromFile = (cb) => {
 };
 
 module.exports = class Product {
-    constructor(title, imageUrl, description, price) {
+    constructor(id, title, price, imageUrl, description) {
+        this.id = id;
         this.title = title;
+        this.price = price;
         this.imageUrl = imageUrl;
         this.description = description;
-        this.price = price;
     }
 
     static fetchAll(cb) {
         getProductsFromFile(cb);
     }
 
-    save() {
-        this.id = Math.random().toString();
-        getProductsFromFile(products => {
-            products.push(this);
-            fs.writeFile(p, JSON.stringify(products), (err) => {
-                console.log(err);
-            });
-        });
-    }
-
     static findById(id, cb) {
         getProductsFromFile(products => {
             const product = products.find(p => p.id === id);
             cb(product);
+        });
+    }
+
+    save() {
+        getProductsFromFile(products => {
+            if (this.id) {
+                const existingProductIndex = products.findIndex(prod => prod.id === this.id);
+                const updatedProducts = [...products];
+                updatedProducts[existingProductIndex] = this;
+                fs.writeFile(p, JSON.stringify(updatedProducts), (err) => {
+                    console.log(err);
+                });
+            } else {
+                this.id = Math.random().toString();
+                products.push(this);
+                fs.writeFile(p, JSON.stringify(products), (err) => {
+                    console.log(err);
+                });
+            }
         });
     }
 };

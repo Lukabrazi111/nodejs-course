@@ -1,1 +1,16 @@
-[{"id":"37189","title":"A Book","imageUrl":"https://t3.ftcdn.net/jpg/00/59/63/30/360_F_59633034_GHlAAALTnXLdBeLPpEQWjzZhsad3QtNX.jpg","description":"This is an awesome book!","price":"19"},{"title":"Chainik","imageUrl":"https://horehotrade.bg/wp-content/uploads/2020/10/0129359.png","description":"The best chainik in the world!","price":"12.99","id":"0.9233406723008375"}]
+[
+  {
+    "id": "1",
+    "title": "A Book",
+    "imageUrl": "https://t3.ftcdn.net/jpg/00/59/63/30/360_F_59633034_GHlAAALTnXLdBeLPpEQWjzZhsad3QtNX.jpg",
+    "description": "This is an awesome book!",
+    "price": "19"
+  },
+  {
+    "id": "0.9233406723008375",
+    "title": "Chainik!!",
+    "price": "12.99",
+    "imageUrl": "https://horehotrade.bg/wp-content/uploads/2020/10/0129359.png ",
+    "description": "yleobaa ra\r\n            "
+  }
+]
